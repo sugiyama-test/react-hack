@@ -25,21 +25,20 @@ const styles = theme => ({
 const WrapMainContent = (WrappedComponent, options = {}) => {
 
   const HOC = class extends React.Component {
-    
+
     render() {
-    
+
       // Material-ui関連
       const { classes, ...other_props } = this.props;
     
       return (
         <Scrollbars>
-          
+
           {/* classNameでwrapperとfooterを指定することで、footer（今回はAdsense）をページ下部に貼り付けることが出来る（見た目用途） */}
           <div className={classes.wrapper}>
-          
-          
+
             <WrappedComponent {...other_props} />
-            
+
             {/* Google Adsense設定。詳細はこちら：https://github.com/hustcc/react-adsense */}
             {/* clientやstlotは私の設定なので実際は各自の値を利用すること */}
             <div className={classes.footer}>

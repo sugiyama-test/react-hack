@@ -46,6 +46,7 @@ const styles = theme => ({
   },
   appBar: {
     position: 'absolute',
+    backGroundColor: '#fff!important',
     marginLeft: drawerWidth,
     [theme.breakpoints.up('md')]: {
       width: `calc(100% - ${drawerWidth}px)`,
@@ -108,12 +109,13 @@ class ResponsiveDrawer extends React.Component {
   shareDialogToggle = () => {
     this.setState({ shareDialogOpen: !this.state.shareDialogOpen });
   }
-  
+
   render() {
-    
+
     // Material-ui関連
     const { classes, theme } = this.props;
-    
+
+    //ここでサイドバーに遷移ボタンを作成している。
     const drawer = (
       <div>
         <List>
@@ -121,7 +123,7 @@ class ResponsiveDrawer extends React.Component {
             to="/info"
             onClick={this.closeDrawerNav}
             icon={<InfoIcon />}
-            text="Animelとは"
+            text="wei"
           />
         </List>
         <Divider />
@@ -133,18 +135,43 @@ class ResponsiveDrawer extends React.Component {
             text="トップページ"
           />
           <ResponsiveDrawerListItem
+            to="/Clock"
+            onClick={this.closeDrawerNav}
+            icon={<InfoIcon />}
+            text="設定"
+          />
+                    <ResponsiveDrawerListItem
             to="/settings"
             onClick={this.closeDrawerNav}
             icon={<SettingsIcon />}
-            text="設定"
+            text="ミニゲーム"
           />
+                    <ResponsiveDrawerListItem
+            to="/settings"
+            onClick={this.closeDrawerNav}
+            icon={<SettingsIcon />}
+            text="検索"
+          />
+                    <ResponsiveDrawerListItem
+            to="/settings"
+            onClick={this.closeDrawerNav}
+            icon={<SettingsIcon />}
+            text="ランキング"
+          />
+                              <ResponsiveDrawerListItem
+            to="/settings"
+            onClick={this.closeDrawerNav}
+            icon={<SettingsIcon />}
+            text="画像集"
+          />
+
         </List>
       </div>
     );
 
     return (
       <div className={classes.root}>
-        <AppBar className={classes.appBar} position="fixed">
+        <AppBar className={classes.appBar} position="fixed" color="default">
           <Toolbar className={classes.toolBar} variant="dense">
             <IconButton
               color="inherit"

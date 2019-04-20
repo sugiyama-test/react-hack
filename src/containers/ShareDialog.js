@@ -137,7 +137,7 @@ class ShareDialog extends React.Component {
             onCopy={() => actions.setNotification('success','クリップボードにコピーしました')}>
             <Button
               variant="contained"
-              color="primary"
+              color="secondary"
               className={classes.copyToCripboardButton}
             >
               URLをコピー
@@ -146,7 +146,7 @@ class ShareDialog extends React.Component {
         </DialogContent>
         <Divider/>
         <DialogActions>
-          <Button onClick={() => this.props.onClose()} color="primary" autoFocus>
+          <Button onClick={() => this.props.onClose()} color="secondary" autoFocus>
             閉じる
           </Button>
         </DialogActions>

@@ -25,7 +25,7 @@ const styles = theme => ({
     width: '100%',
     maxWidth: 700,
   },
-  
+
   button: {
     marginTop: 30,
     marginBottom: 20,
@@ -87,11 +87,10 @@ class Home extends React.Component {
     for (var i = 0; i < cours_detail.length; i++) {
       cours.push(<MenuItem key={i+1} value={i+1}>{cours_detail[i]}</MenuItem>);
     }
-              
 
     return (
       <div>
-        <img src="/images/title.png" alt="title" className={classes.titleImage}/>
+        <img src="/images/logo_animel_white.png" alt="title" className={classes.titleImage}/>
         <form autoComplete="off">
           <FormControl className={classes.formControl}>
             <InputLabel shrink htmlFor="year-helper">西暦</InputLabel>
@@ -122,7 +121,7 @@ class Home extends React.Component {
         </form>
         <Button
           variant="contained"
-          color="primary"
+          color="secondary"
           className={classes.button}
           onClick={() => actions.getAnimes(this.state.year, this.state.cour)}
         >

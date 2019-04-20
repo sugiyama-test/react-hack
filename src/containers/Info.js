@@ -32,7 +32,7 @@ class Info extends React.Component {
 
     return (
       <div>
-        <h2>Animelについて</h2>
+        <h2>Resaniについて</h2>
         <div className={classes.textLeft}>
         
           <Paper className={classes.root} elevation={1}>
