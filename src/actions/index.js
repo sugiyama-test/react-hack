@@ -1,5 +1,4 @@
 
-
 import * as actionTypes from '../utils/actionTypes';
 import axios from 'axios' // API取得用
 
@@ -15,7 +14,7 @@ export const closeNotification = (variant, message) => ({
 });
 
 // 非同期取得操作
-export const getAnimes = (year, cours) => {
+export const getAnimes = () => {
   return (dispatch) => {
     dispatch(getAnimesRequest());
     
@@ -23,9 +22,9 @@ export const getAnimes = (year, cours) => {
     // https://qiita.com/AKB428/items/64938febfd4dcf6ea698
     // を利用させていただきました。素晴らしいAPI、大変感謝です。
     // SSL化していないサイトの場合はこのAPIは両方対応しているのでhttpに修正すること。
-    return axios.get('https://api.moemoe.tokyo/anime/v1/master/' + year + '/' + cours)
+    return axios.get('https://ghibliapi.herokuapp.com/films')
       .then(response => dispatch(getAnimesSuccess(response.data)))
-      .catch(error => dispatch(getAnimesFailure(error)))
+      .catch(error => dispatch(getAnimesFailure(error)));
   };
 };
 

@@ -10,7 +10,7 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions';
 
 // コンポーネントの準備
-import Anime from '../components/Anime'
+import Anime from '../components/Anime';
 
 // スタイル
 const styles = theme => ({
@@ -26,7 +26,6 @@ class AnimeList extends React.Component {
   render() {
     // redux関連
     const { AnimeListReducer } = this.props;
-    
     // Material-ui関連
     const { classes } = this.props;
     
@@ -36,15 +35,17 @@ class AnimeList extends React.Component {
     let animeCards =[];
     let emptyCards =[];
     const animeItemsLength = animeItems.length;
+
     
-    for (let index=0; index<animeItemsLength; index++){
-      animeCards.push(<Anime key={index} {...animeItems[index]}/>);
-      emptyCards.push(<Anime key={animeItemsLength + index} empty="true"/>);
+    for (let i=0; i<animeItemsLength; i++){
+      animeCards.push(<Anime key={i} {...animeItems[i]}/>);
+      emptyCards.push(<Anime key={animeItemsLength + i} empty="true"/>);
     }
     renderCards.push(animeCards);
     renderCards.push(emptyCards);
 
-    
+
+
     // 読み込み中はロード画面にする
     if (AnimeListReducer.isFetching === true){
       return (

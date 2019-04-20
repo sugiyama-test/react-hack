@@ -29,7 +29,7 @@ import ShareDialog from '../containers/ShareDialog';
 import ResponsiveDrawerListItem from '../components/ResponsiveDrawerListItem';
 
 // 設定値
-const drawerWidth = 240;
+const drawerWidth = 0;
 const headerNavigationHeight = 56;
 const bottomNavigationHeight = 56;
 
@@ -118,7 +118,7 @@ class ResponsiveDrawer extends React.Component {
     //ここでサイドバーに遷移ボタンを作成している。
     const drawer = (
       <div>
-        <List>
+        {/* <List>
           <ResponsiveDrawerListItem
             to="/info"
             onClick={this.closeDrawerNav}
@@ -165,7 +165,7 @@ class ResponsiveDrawer extends React.Component {
             text="画像集"
           />
 
-        </List>
+        </List> */}
       </div>
     );
 
@@ -186,21 +186,9 @@ class ResponsiveDrawer extends React.Component {
                 <img src="/images/logo_animel_white.png" alt="logo_animel_white" className={classes.headerLogo}/>
               </Typography>
             </Link>
-            <IconButton
-              color="inherit"
-              aria-label="Open Share"
-            >
-              <Typography variant="button" color="inherit" noWrap>
-                <ShareIcon onClick={this.shareDialogToggle}/>
-                <ShareDialog
-                  open={this.state.shareDialogOpen}
-                  onClose={this.shareDialogToggle}
-                />
-              </Typography>
-            </IconButton>
           </Toolbar>
         </AppBar>
-        <Hidden mdUp>
+        {/* <Hidden mdUp>
           <Drawer
             variant="temporary"
             anchor={theme.direction === 'rtl' ? 'right' : 'left'}
@@ -226,7 +214,7 @@ class ResponsiveDrawer extends React.Component {
           >
             {drawer}
           </Drawer>
-        </Hidden>
+        </Hidden> */}
         <main className={classes.content}>
           {this.props.children}
         </main>

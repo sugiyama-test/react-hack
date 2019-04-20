@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import GenelalButton from '../components/GeneralButton';
 
 // Material-UIアイコン取得
 import Search from '@material-ui/icons/Search';
@@ -64,36 +64,25 @@ class Home extends React.Component {
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
-  
-  
 
   render() {
 
     // redux関連
     const { actions } = this.props;
-    
+
     // Material-ui関連
     const { classes } = this.props;
-    
-    // Year入力
-    const years = [];
-    for (var y = current_year; y >= 2014; y--) {
-      years.push(<MenuItem key={y} value={y}>{y}年</MenuItem>);
-    }
-    // Cours入力
-    const cours = [];
-    const cours_detail = ['1期（冬期）', '2期（春期）', '3期（夏期）', '4期（秋期）'];
-    const cours_detail_month = ['冬：1～3月', '春：4～6月', '夏：7～9月', '秋：10～12月'];
-    for (var i = 0; i < cours_detail.length; i++) {
-      cours.push(<MenuItem key={i+1} value={i+1}>{cours_detail[i]}</MenuItem>);
-    }
+
+    // 監督入力
+    const years = ['宮崎駿'];
+
 
     return (
       <div>
         <img src="/images/logo_animel_white.png" alt="title" className={classes.titleImage}/>
         <form autoComplete="off">
           <FormControl className={classes.formControl}>
-            <InputLabel shrink htmlFor="year-helper">西暦</InputLabel>
+            <InputLabel shrink htmlFor="year-helper">監督の名前</InputLabel>
             <Select
               value={this.state.year}
               onChange={this.handleChange}
@@ -105,28 +94,11 @@ class Home extends React.Component {
             {years}
             </Select>
           </FormControl>
-          <FormControl className={classes.formControl}>
-            <InputLabel shrink htmlFor="cour-helper">クール</InputLabel>
-            <Select
-              value={this.state.cour}
-              onChange={this.handleChange}
-              inputProps={{
-                name: 'cour',
-                id: 'cour-helper',
-              }}
-            >
-            {cours}
-            </Select>
-          </FormControl>
         </form>
         <Button
-          variant="contained"
-          color="secondary"
-          className={classes.button}
           onClick={() => actions.getAnimes(this.state.year, this.state.cour)}
         >
-          {this.state.year}年（{cours_detail_month[this.state.cour-1]}）<br/>のアニメを検索
-          <Search className={classes.rightIcon}/>
+        <GenelalButton title="検索" />
         </Button>
         <AnimeList/>
       </div>

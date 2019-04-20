@@ -10,7 +10,8 @@ import Avatar from '@material-ui/core/Avatar';
 const styles = {
   // Cards
   card: {
-    width: 330,
+    width: "100%",
+    borderRadius:20,
     marginTop: 10,
     marginBottom: 10,
   },
@@ -51,14 +52,8 @@ const styles = {
 };
 
 function Anime(props) {
-  const { empty, title, title_short1, title_short2, twitter_hash_tag, twitter_account, public_url, classes } = props;
+  const { title, title_short1, title_short2, public_url, classes } = props;
 
-  if (empty === "true") {
-    return (
-      <Card className={classes.empty}>
-      </Card>
-    );
-  } else {
     return (
       <Card className={classes.card}>
         <CardContent>
@@ -75,31 +70,16 @@ function Anime(props) {
               {title_short2}
             </Typography>
           }
-          {twitter_hash_tag !== '' &&
+          {title !== '' &&
             <Typography className={classes.title} color="textSecondary">
-              <a href={'https://twitter.com/search?q=%23'+twitter_hash_tag} target="_blank" rel="noopener noreferrer">
-                #{twitter_hash_tag}
+              <a href={'https://twitter.com/search?q=%23'+ title} target="_blank" rel="noopener noreferrer">
+                #{title}
               </a>
             </Typography>
           }
         </CardContent>
-        <CardActions>
-          <div className={classes.row}>
-            {twitter_account !== '' &&
-              <a href={'https://twitter.com/'+twitter_account} target="_blank" rel="noopener noreferrer">
-                <Avatar className={classes.twitterAvatar} src="/images/twitter.svg"/>
-              </a>
-            }
-            {public_url !== '' &&
-              <a href={public_url} target="_blank" rel="noopener noreferrer">
-                <Avatar className={classes.wwwAvatar} src="/images/www.svg"/>
-              </a>
-            }
-          </div>
-        </CardActions>
       </Card>
     );
-  }
 }
 
 Anime.propTypes = {

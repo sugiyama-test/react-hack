@@ -20,7 +20,7 @@ import { Route, Switch } from 'react-router-dom';
 // 不明なRouteは全てNotFound
 const NotFound = () => {
   return(
-    <h2>ページが見つかりません</h2>
+    <h2>ページが見つかりませんでした笑</h2>
   )
 }
 
