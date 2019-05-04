@@ -15,7 +15,6 @@ const styles = theme => ({
   wrapper: {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100%',
   },
   footer: {
     marginTop: 'auto',
@@ -30,7 +29,7 @@ const WrapMainContent = (WrappedComponent, options = {}) => {
 
       // Material-ui関連
       const { classes, ...other_props } = this.props;
-    
+
       return (
         <Scrollbars>
 

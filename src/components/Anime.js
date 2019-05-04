@@ -2,15 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import Avatar from '@material-ui/core/Avatar';
 
 const styles = {
   // Cards
   card: {
-    width: "100%",
+    width:'80%',
     borderRadius:20,
     marginTop: 10,
     marginBottom: 10,
@@ -29,7 +27,7 @@ const styles = {
   title: {
     fontSize: 14,
   },
-  
+
   // Avatar Icons
   avatar: {
     margin: 10,
@@ -52,22 +50,22 @@ const styles = {
 };
 
 function Anime(props) {
-  const { title, title_short1, title_short2, public_url, classes } = props;
+  const { title, director, release_date　, classes } = props;
 
     return (
       <Card className={classes.card}>
         <CardContent>
+          {release_date !== '' &&
+            <Typography className={classes.title} color="textSecondary">
+              {release_date}
+            </Typography>
+          }
           <Typography variant="headline" component="h2">
             {title}
           </Typography>
-          {title_short1 !== '' &&
+          {director !== '' &&
             <Typography className={classes.title} color="textSecondary">
-              {title_short1}
-            </Typography>
-          }
-          {title_short2 !== '' &&
-            <Typography className={classes.title} color="textSecondary">
-              {title_short2}
+              {director}
             </Typography>
           }
           {title !== '' &&

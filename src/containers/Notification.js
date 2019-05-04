@@ -26,10 +26,10 @@ class Notification extends React.Component {
 
     // redux関連
     const { NotificationReducer, actions } = this.props;
-    
+
     // Material-ui関連
     const { classes } = this.props;
-    
+
 
     return (
       <Snackbar

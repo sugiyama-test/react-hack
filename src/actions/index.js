@@ -1,6 +1,6 @@
 
 import * as actionTypes from '../utils/actionTypes';
-import axios from 'axios' // API取得用
+import axios from 'axios'; // API取得用
 
 
 // Notification操作

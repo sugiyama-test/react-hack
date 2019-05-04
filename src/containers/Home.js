@@ -7,9 +7,6 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import GenelalButton from '../components/GeneralButton';
 
-// Material-UIアイコン取得
-import Search from '@material-ui/icons/Search';
-
 // Redux関連
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -97,7 +94,7 @@ class Home extends React.Component {
         <Button
           onClick={() => actions.getAnimes(this.state.year, this.state.cour)}
         >
-        <GenelalButton title="検索" />
+        <GenelalButton title="検索"/>
         </Button>
         <AnimeList/>
       </div>

@@ -19,6 +19,9 @@ const styles = theme => ({
     flexWrap: 'wrap',
     justifyContent: 'center',
   },
+  road: {
+    margin: '50px',
+  }
 });
 
 class AnimeList extends React.Component {
@@ -28,28 +31,23 @@ class AnimeList extends React.Component {
     const { AnimeListReducer } = this.props;
     // Material-ui関連
     const { classes } = this.props;
-    
+
     // Anime関連
     const animeItems = AnimeListReducer.items;
     let renderCards = [];
     let animeCards =[];
-    let emptyCards =[];
     const animeItemsLength = animeItems.length;
 
-    
     for (let i=0; i<animeItemsLength; i++){
       animeCards.push(<Anime key={i} {...animeItems[i]}/>);
-      emptyCards.push(<Anime key={animeItemsLength + i} empty="true"/>);
     }
     renderCards.push(animeCards);
-    renderCards.push(emptyCards);
-
 
 
     // 読み込み中はロード画面にする
     if (AnimeListReducer.isFetching === true){
       return (
-        <div>
+        <div className={classes.road}>
           <CircularProgress className={classes.progress} size={30} />
         </div>
       );
