@@ -57,7 +57,7 @@ const styles = theme => ({
       paddingBottom: 10,
     },
   },
-  
+
   // ヘッダーロゴ
   headerLogo: {
     display: 'flex',
@@ -80,7 +80,7 @@ class ResponsiveDrawer extends React.Component {
   openDrawerNav = () => {
     this.setState({ mobileOpen: true });
   }
-  
+
   // シェアボタン挙動
   shareDialogToggle = () => {
     this.setState({ shareDialogOpen: !this.state.shareDialogOpen });

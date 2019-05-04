@@ -42,7 +42,7 @@ class RouteRelatedBottomNavigation extends React.Component {
     { label: 'トップページ', icon: <HomeIcon />, link_to: '/'},
     { label: '', icon: <InfoIcon />, link_to: '/info'},
   ];
-  
+
   buttons = this.buttons_info.map( (button_info, index) => {
       return (
         <BottomNavigationAction
@@ -55,11 +55,11 @@ class RouteRelatedBottomNavigation extends React.Component {
         />
       );
     })
-  
+
   render() {
     // Material-ui関連
     const { classes } = this.props;
-    
+
     return (
       <div className={classes.wrapper}>
         <BottomNavigation
