@@ -17,7 +17,7 @@ const styles = theme => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
   },
 });
 
@@ -50,10 +50,10 @@ class AnimeList extends React.Component {
     if (AnimeListReducer.isFetching === true){
       return (
         <div>
-          <CircularProgress className={classes.progress} size={50} />
+          <CircularProgress className={classes.progress} size={30} />
         </div>
       );
-    
+
     // カードを表示
     } else {
       return (

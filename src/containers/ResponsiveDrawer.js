@@ -2,31 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { withStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import Hidden from '@material-ui/core/Hidden';
-import Divider from '@material-ui/core/Divider';
-import MenuIcon from '@material-ui/icons/Menu';
 
-// Material-UIアイコン取得
-import SettingsIcon from '@material-ui/icons/Settings';
-import InfoIcon from '@material-ui/icons/Info';
-import HomeIcon from '@material-ui/icons/Home';
-import ShareIcon from '@material-ui/icons/Share';
-
-
-// Route関連
-import { Link } from 'react-router-dom';
-
-// コンテナの準備
-import ShareDialog from '../containers/ShareDialog';
-
-// コンポーネントの準備
-import ResponsiveDrawerListItem from '../components/ResponsiveDrawerListItem';
 
 // 設定値
 const drawerWidth = 0;
@@ -115,106 +91,8 @@ class ResponsiveDrawer extends React.Component {
     // Material-ui関連
     const { classes, theme } = this.props;
 
-    //ここでサイドバーに遷移ボタンを作成している。
-    const drawer = (
-      <div>
-        {/* <List>
-          <ResponsiveDrawerListItem
-            to="/info"
-            onClick={this.closeDrawerNav}
-            icon={<InfoIcon />}
-            text="wei"
-          />
-        </List>
-        <Divider />
-        <List>
-          <ResponsiveDrawerListItem
-            to="/"
-            onClick={this.closeDrawerNav}
-            icon={<HomeIcon />}
-            text="トップページ"
-          />
-          <ResponsiveDrawerListItem
-            to="/Clock"
-            onClick={this.closeDrawerNav}
-            icon={<InfoIcon />}
-            text="設定"
-          />
-                    <ResponsiveDrawerListItem
-            to="/settings"
-            onClick={this.closeDrawerNav}
-            icon={<SettingsIcon />}
-            text="ミニゲーム"
-          />
-                    <ResponsiveDrawerListItem
-            to="/settings"
-            onClick={this.closeDrawerNav}
-            icon={<SettingsIcon />}
-            text="検索"
-          />
-                    <ResponsiveDrawerListItem
-            to="/settings"
-            onClick={this.closeDrawerNav}
-            icon={<SettingsIcon />}
-            text="ランキング"
-          />
-                              <ResponsiveDrawerListItem
-            to="/settings"
-            onClick={this.closeDrawerNav}
-            icon={<SettingsIcon />}
-            text="画像集"
-          />
-
-        </List> */}
-      </div>
-    );
-
     return (
       <div className={classes.root}>
-        <AppBar className={classes.appBar} position="fixed" color="default">
-          <Toolbar className={classes.toolBar} variant="dense">
-            <IconButton
-              color="inherit"
-              aria-label="Open drawer"
-              onClick={() => this.openDrawerNav()}
-              className={classes.navIconHide}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Link to="/">
-              <Typography variant="title" color="inherit" noWrap>
-                <img src="/images/logo_animel_white.png" alt="logo_animel_white" className={classes.headerLogo}/>
-              </Typography>
-            </Link>
-          </Toolbar>
-        </AppBar>
-        {/* <Hidden mdUp>
-          <Drawer
-            variant="temporary"
-            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-            open={this.state.mobileOpen}
-            onClose={this.closeDrawerNav}
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
-          >
-            {drawer}
-          </Drawer>
-        </Hidden>
-        <Hidden smDown implementation="css">
-          <Drawer
-            variant="permanent"
-            open
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-          >
-            {drawer}
-          </Drawer>
-        </Hidden> */}
         <main className={classes.content}>
           {this.props.children}
         </main>

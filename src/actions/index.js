@@ -17,11 +17,6 @@ export const closeNotification = (variant, message) => ({
 export const getAnimes = () => {
   return (dispatch) => {
     dispatch(getAnimesRequest());
-    
-    // API: ShangriLa Anime API V1
-    // https://qiita.com/AKB428/items/64938febfd4dcf6ea698
-    // を利用させていただきました。素晴らしいAPI、大変感謝です。
-    // SSL化していないサイトの場合はこのAPIは両方対応しているのでhttpに修正すること。
     return axios.get('https://ghibliapi.herokuapp.com/films')
       .then(response => dispatch(getAnimesSuccess(response.data)))
       .catch(error => dispatch(getAnimesFailure(error)));
