@@ -6,7 +6,6 @@ import { withStyles } from '@material-ui/core/styles';
 
 // 設定値
 const drawerWidth = 0;
-const headerNavigationHeight = 56;
 const bottomNavigationHeight = 56;
 
 // スタイル
@@ -48,16 +47,13 @@ const styles = theme => ({
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit * 3,
-    paddingTop: `calc(10px + ${headerNavigationHeight}px)`,
-    paddingBottom: `calc(10px + ${bottomNavigationHeight}px)`,
     paddingLeft: 0,
     paddingRight: 0,
     [theme.breakpoints.up('md')]: {
       paddingBottom: 10,
     },
   },
-  
+
   // ヘッダーロゴ
   headerLogo: {
     display: 'flex',
@@ -80,7 +76,7 @@ class ResponsiveDrawer extends React.Component {
   openDrawerNav = () => {
     this.setState({ mobileOpen: true });
   }
-  
+
   // シェアボタン挙動
   shareDialogToggle = () => {
     this.setState({ shareDialogOpen: !this.state.shareDialogOpen });

@@ -21,14 +21,6 @@ const styles = theme => ({
     width: '100%',
     maxWidth: 700,
   },
-
-  button: {
-    marginTop: 30,
-    marginBottom: 20,
-    fontSize: 16,
-    padding: 10,
-    width: 250,
-  },
   leftIcon: {
     marginRight: theme.spacing.unit,
   },

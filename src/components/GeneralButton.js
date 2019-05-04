@@ -20,7 +20,6 @@ export default class GenelalButton extends Component {
       container: {
         display: 'inline-block',
         fontSize: '20px',
-        padding: '20px',
         textDecoration: 'none',
         transition: '.3s',
       },

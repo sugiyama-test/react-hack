@@ -50,7 +50,7 @@ const styles = {
 };
 
 function Anime(props) {
-  const { title, director, release_date　, classes } = props;
+  const { title, director, release_date　,　producer　, classes } = props;
 
     return (
       <Card className={classes.card}>
@@ -66,6 +66,11 @@ function Anime(props) {
           {director !== '' &&
             <Typography className={classes.title} color="textSecondary">
               {director}
+            </Typography>
+          }
+          {producer !== '' &&
+            <Typography className={classes.title} color="textSecondary">
+              {producer}
             </Typography>
           }
           {title !== '' &&
