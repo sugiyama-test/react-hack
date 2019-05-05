@@ -19,7 +19,7 @@ const style = {margintop: -5};
 export default class Message extends React.Component {
   render() {
     return (
-      <div className="Message">
+      <div className="">
       <List>
         <ListItem disabled="true">
           <Avatar className="" src={this.props.message.profile_image} />

@@ -4,6 +4,7 @@ import { firebaseDb } from '../firebase/index';
 import Message from './Message.js';
 import ChatBox from './ChatBox.js';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Grid from '@material-ui/core/Grid';
 
 const messagesRef = firebaseDb.ref('messages');
 
@@ -23,16 +24,18 @@ class AppChat extends Component {
   render() {
     return (
       <MuiThemeProvider>
-        <div className="App">
-          <div className="App-header">
-            <h1>終わったら思った事を書いてね</h1>
+        <div class="container">
+          <div className="commentBox">
+            <div className="App-header">
+              <h1>終わったら思った事を書いてね</h1>
+            </div>
+            <div className="comment">
+              {this.state.messages.map((m, i) => {
+                return <Message key={i} message={m} />;
+              })}
+            </div>
+            <ChatBox onTextChange={this.onTextChange} onButtonClick={this.onButtonClick} />
           </div>
-          <div className="MessageList">
-            {this.state.messages.map((m, i) => {
-              return <Message key={i} message={m} />;
-            })}
-          </div>
-          <ChatBox onTextChange={this.onTextChange} onButtonClick={this.onButtonClick} />
         </div>
       </MuiThemeProvider>
     );

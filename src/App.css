@@ -7,3 +7,43 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.comment {
+  text-align: left;
+}
+
+.commentBox {
+  margin-top:50px;
+  margin-bottom:50px;
+  background-color:#59a72f;
+  color : #fff;
+  padding-right:50px;
+  padding-left:50px;
+  padding-bottom:50px;
+  border-radius: 50px;
+}
+
+.ChatBox {
+  margin-top:50px;
+  background-color: #fff;
+  color : #fff;
+  padding:50px;
+  border-radius: 50px;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width:1140px;
+}
+
+.App-header {
+  padding-top:50px;
+  padding-bottom:50px;
+}
+
+.App-header h1 {
+  margin:initial;
+}

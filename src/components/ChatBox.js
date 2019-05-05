@@ -10,7 +10,7 @@ export default class ChatBox extends React.Component {
         <div className="ChatBox">
           <div className="">
             <TextField name='user_name' onChange={this.props.onTextChange} className=""  placeholder="Name" />
-<br />
+          <br />
             <TextField name='profile_image' onChange={this.props.onTextChange} className="" placeholder="Profile Image URL" />
           </div>
           <TextField rows="4" multiLine="true" name='text' className="" onChange={this.props.onTextChange} />
