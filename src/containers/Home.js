@@ -38,15 +38,13 @@ const styles = theme => ({
 });
 
 
-const current_year = (new Date()).getFullYear();
-const current_cour = Math.ceil((new Date()).getMonth() / 3);
+const directer = ['宮崎駿','高畑勲'];
 
 class Home extends React.Component {
 
   // ここだけでしか使わないのでRedux未使用;
   state = {
-    year: current_year,
-    cour: current_cour,
+    directer: directer,
   };
 
   handleChange = event => {
@@ -61,9 +59,7 @@ class Home extends React.Component {
     // Material-ui関連
     const { classes } = this.props;
 
-    // 監督入力
-    const years = ['宮崎駿'];
-
+    console.log(this.state.directer)
 
     return (
       <div>
@@ -72,14 +68,14 @@ class Home extends React.Component {
           <FormControl className={classes.formControl}>
             <InputLabel shrink htmlFor="year-helper">監督の名前</InputLabel>
             <Select
-              value={this.state.year}
+              value={this.state.directer}
               onChange={this.handleChange}
               inputProps={{
                 name: 'year',
                 id: 'year-helper',
               }}
             >
-            {years}
+            {directer}
             </Select>
           </FormControl>
         </form>

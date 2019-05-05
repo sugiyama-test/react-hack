@@ -10,8 +10,8 @@ const styles = {
   card: {
     width:'80%',
     borderRadius:20,
-    marginTop: 10,
-    marginBottom: 10,
+    marginTop: 20,
+    marginBottom: 20,
   },
   empty: {
     width: 330,
@@ -28,25 +28,6 @@ const styles = {
     fontSize: 14,
   },
 
-  // Avatar Icons
-  avatar: {
-    margin: 10,
-  },
-  twitterAvatar: {
-    margin: 10,
-    backgroundColor: '#1da1f2',
-  },
-  wwwAvatar: {
-    margin: 10,
-    backgroundColor: '#6c1df2',
-    padding: 7,
-    boxSizing: 'border-box',
-  },
-  row: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-  },
 };
 
 function Anime(props) {
