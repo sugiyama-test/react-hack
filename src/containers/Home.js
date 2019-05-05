@@ -6,6 +6,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import GenelalButton from '../components/GeneralButton';
+import AppChat from '../components/AppChat';
 
 // Redux関連
 import { connect } from 'react-redux';
@@ -82,6 +83,7 @@ class Home extends React.Component {
 
         </Button>
         <AnimeList/>
+        <AppChat/>
       </div>
     );
   }
