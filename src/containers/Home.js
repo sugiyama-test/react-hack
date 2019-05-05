@@ -87,6 +87,7 @@ class Home extends React.Component {
           onClick={() => actions.getAnimes(this.state.year, this.state.cour)}
         >
         <GenelalButton title="検索"/>
+
         </Button>
         <AnimeList/>
       </div>

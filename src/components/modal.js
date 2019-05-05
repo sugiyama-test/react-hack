@@ -12,8 +12,8 @@ const customStyles = {
   }
 };
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement('#yourAppElement');
-class App extends React.Component {
+Modal.setAppElement();
+export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -59,4 +59,3 @@ class App extends React.Component {
     );
   }
 }
-ReactDOM.render(<App />, appElement);

@@ -49,13 +49,11 @@ const styles = {
   },
 };
 
-const aaa = console.log('aaa');
-
 function Anime(props) {
   const { title, director, release_date　,　producer　, classes } = props;
 
     return (
-      <Card className={classes.card} onMouseEnter={aaa}>
+      <Card className={classes.card}>
           <CardContent>
             {release_date !== '' &&
               <Typography className={classes.title} color="textSecondary">
