@@ -11,7 +11,8 @@ const styles = {
     width: "80%",
     borderRadius: 20,
     marginTop: 20,
-    marginBottom: 20
+    marginBottom: 20,
+    position: 'relative',
   },
   empty: {
     width: 330,
@@ -53,7 +54,7 @@ function Anime(props) {
 
     return (
       <Card className={classes.card}>
-        <CardContent>
+        <CardContent className='card'>
           {release_date !== "" && (
             <Typography className={classes.release} color="textSecondary">
               {release_date}

@@ -20,7 +20,7 @@ import AnimeList from '../containers/AnimeList';
 const styles = theme => ({
   titleImage: {
     width: '100%',
-    maxWidth: 700,
+    maxWidth: 600,
     marginTop: 50 ,
     marginBottom: 50 ,
   },
@@ -59,7 +59,7 @@ class Home extends React.Component {
     console.log(this.state.directer)
 
     return (
-      <div>
+      <div class='home'>
         <img src="/images/logo_animel_white.png" alt="title" className={classes.titleImage}/>
         <form autoComplete="off">
           <FormControl className={classes.formControl}>

@@ -4,7 +4,6 @@ import { firebaseDb } from '../firebase/index';
 import Message from './Message.js';
 import ChatBox from './ChatBox.js';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Grid from '@material-ui/core/Grid';
 
 const messagesRef = firebaseDb.ref('messages');
 

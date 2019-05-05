@@ -1,5 +1,4 @@
 body {
-
 }
 
 .App {
@@ -13,6 +12,7 @@ body {
 }
 
 .commentBox {
+  background-image:url(./image/totoro.png);
   margin-top:50px;
   margin-bottom:50px;
   background-color:#59a72f;
@@ -46,4 +46,17 @@ body {
 
 .App-header h1 {
   margin:initial;
+}
+
+.home {
+  background-color:#fff; 
+  background-image: url('./image/bigtotoro.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.card::before {
+  content: url(./image/mainimg.png);
+  position: absolute;
+  right:50px;
 }
