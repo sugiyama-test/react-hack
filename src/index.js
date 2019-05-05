@@ -48,6 +48,6 @@ ReactDOM.render(
         <App/>
       </Router>
     </MuiThemeProvider>
-  </Provider>  
+  </Provider>
   , document.getElementById('root'));
 registerServiceWorker();
