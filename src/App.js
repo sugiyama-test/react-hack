@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 // コンテナ読み込み
 import ResponsiveDrawer from './containers/ResponsiveDrawer';
-import Notification from './containers/Notification';
 import Home from './containers/Home';
 
 // コンポーネント読み込み
@@ -28,7 +27,6 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Notification/>
         <ResponsiveDrawer className="ResponsiveDrawer">
           <Switch>
             <Route exact path="/" component={WrapMainContent(Home)} />
