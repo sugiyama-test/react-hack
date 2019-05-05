@@ -20,21 +20,17 @@ const styles = theme => ({
   titleImage: {
     width: '100%',
     maxWidth: 700,
-  },
-  leftIcon: {
-    marginRight: theme.spacing.unit,
-  },
-  rightIcon: {
-    marginLeft: theme.spacing.unit,
-  },
-  root: {
+    marginTop: 50 ,
+    marginBottom: 50 ,
   },
 
   // Form
   formControl: {
     margin: theme.spacing.unit,
     minWidth: 120,
+    marginBottom: 50,
   },
+
 });
 
 
