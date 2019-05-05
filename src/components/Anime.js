@@ -25,7 +25,12 @@ const styles = {
     transform: 'scale(0.8)',
   },
   title: {
-    fontSize: 14,
+    fontSize: 20 ,
+  },
+
+  title2: {
+    margin:10,
+    fontSize: 16 ,
   },
 
 };
@@ -45,17 +50,17 @@ function Anime(props) {
               {title}
             </Typography>
             {director !== '' &&
-              <Typography className={classes.title} color="textSecondary">
+              <Typography className={classes.title2} color="textSecondary">
                 {director}
               </Typography>
             }
             {release_date !== '' &&
-              <Typography className={classes.title} color="textSecondary">
+              <Typography className={classes.title2} color="textSecondary">
                 {description}
               </Typography>
             }
             {producer !== '' &&
-              <Typography className={classes.title} color="textSecondary">
+              <Typography className={classes.title2} color="textSecondary">
                 {producer}
               </Typography>
             }
