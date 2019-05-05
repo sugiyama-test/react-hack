@@ -49,38 +49,40 @@ const styles = {
   },
 };
 
+const aaa = console.log('aaa');
+
 function Anime(props) {
   const { title, director, release_date　,　producer　, classes } = props;
 
     return (
-      <Card className={classes.card}>
-        <CardContent>
-          {release_date !== '' &&
-            <Typography className={classes.title} color="textSecondary">
-              {release_date}
+      <Card className={classes.card} onMouseEnter={aaa}>
+          <CardContent>
+            {release_date !== '' &&
+              <Typography className={classes.title} color="textSecondary">
+                {release_date}
+              </Typography>
+            }
+            <Typography variant="headline" component="h2">
+              {title}
             </Typography>
-          }
-          <Typography variant="headline" component="h2">
-            {title}
-          </Typography>
-          {director !== '' &&
-            <Typography className={classes.title} color="textSecondary">
-              {director}
-            </Typography>
-          }
-          {producer !== '' &&
-            <Typography className={classes.title} color="textSecondary">
-              {producer}
-            </Typography>
-          }
-          {title !== '' &&
-            <Typography className={classes.title} color="textSecondary">
-              <a href={'https://twitter.com/search?q=%23'+ title} target="_blank" rel="noopener noreferrer">
-                #{title}
-              </a>
-            </Typography>
-          }
-        </CardContent>
+            {director !== '' &&
+              <Typography className={classes.title} color="textSecondary">
+                {director}
+              </Typography>
+            }
+            {producer !== '' &&
+              <Typography className={classes.title} color="textSecondary">
+                {producer}
+              </Typography>
+            }
+            {title !== '' &&
+              <Typography className={classes.title} color="textSecondary">
+                <a href={'https://twitter.com/search?q=%23'+ title} target="_blank" rel="noopener noreferrer">
+                  #{title}
+                </a>
+              </Typography>
+            }
+          </CardContent>
       </Card>
     );
 }
