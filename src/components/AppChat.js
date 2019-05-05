@@ -25,7 +25,7 @@ class AppChat extends Component {
       <MuiThemeProvider>
         <div className="App">
           <div className="App-header">
-            <h2>Chat</h2>
+            <h1>終わったら思った事を書いてね</h1>
           </div>
           <div className="MessageList">
             {this.state.messages.map((m, i) => {
@@ -56,10 +56,10 @@ class AppChat extends Component {
 
   onButtonClick() {
     if(this.state.user_name == '') {
-      alert('user_name empty');
+      alert('名前記入してね');
       return;
     } else if(this.state.text == '') {
-      alert('text empty');
+      alert('感想書いてね');
       return;
     }
     messagesRef.push({
