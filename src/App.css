@@ -60,3 +60,10 @@ body {
   position: absolute;
   right:50px;
 }
+
+.card::after {
+  content: url(./image/mainimg.png);
+  position: absolute;
+  left:50px;
+  bottom: 24px;
+}
