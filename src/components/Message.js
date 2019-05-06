@@ -22,8 +22,10 @@ export default class Message extends React.Component {
       <div className="">
       <List>
         <ListItem disabled="true">
-          <Avatar className="" src={this.props.message.profile_image} />
-          <span style={{marginBottom: -5}}>@{this.props.message.user_name}</span>
+          <div className='user'>
+            <Avatar className="userImg" src={this.props.message.profile_image} />
+            <div style={{marginBottom: -5}}>@{this.props.message.user_name}</div>
+          </div>
           <div className="">
             <Chip style={styles.chip} >
               {this.props.message.text}

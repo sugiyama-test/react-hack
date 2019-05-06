@@ -26,7 +26,7 @@ class AppChat extends Component {
         <div class="container">
           <div className="commentBox">
             <div className="App-header">
-              <h1>終わったら思った事を書いてね</h1>
+              <h1>感想くださいまし</h1>
             </div>
             <div className="comment">
               {this.state.messages.map((m, i) => {

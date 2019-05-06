@@ -84,3 +84,14 @@ body {
 .logo:hover {
   color:#93f9c6;
 }
+
+.user {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-bottom:5px;
+}
+
+.userImg {
+  margin-right:10px;
+}
