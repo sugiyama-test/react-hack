@@ -84,7 +84,7 @@ function Anime(props) {
     case 'Grave of the Fireflies':
       aaa = GraveOfTheFireflies;
       break;
-    
+
     case 'My Neighbor Totoro':
       aaa = MyNeighborTotoro;
       break;

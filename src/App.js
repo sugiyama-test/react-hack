@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // コンテナ読み込み
 import ResponsiveDrawer from './containers/ResponsiveDrawer';
 import Home from './containers/Home';
+import Profile from './containers/profile';
 
 // コンポーネント読み込み
 import WrapMainContent from './components/WrapMainContent';
@@ -11,7 +12,7 @@ import WrapMainContent from './components/WrapMainContent';
 import './App.css';
 
 // Route関連
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch , Link } from 'react-router-dom';
 
 // 不明なRouteは全てNotFound
 const NotFound = () => {
@@ -27,9 +28,13 @@ class App extends Component {
 
     return (
       <div className="App">
+        <Link className='logo' to='/'>aaa</Link>
+        <Link className='logo' to='/Profile'>bbb</Link>
+
         <ResponsiveDrawer className="ResponsiveDrawer">
           <Switch>
             <Route exact path="/" component={WrapMainContent(Home)} />
+            <Route path="/Profile" component={WrapMainContent(Profile)} />
             <Route component={WrapMainContent(NotFound)}/>
           </Switch>
         </ResponsiveDrawer>
