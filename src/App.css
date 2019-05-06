@@ -12,10 +12,10 @@ body {
 }
 
 .commentBox {
-  background-image:url(./image/totoro.png);
+  background:url(./image/totoro.png),linear-gradient(130deg, #0fa530, #93f9c6);
+  background-position:85%;
   margin-top:50px;
   margin-bottom:50px;
-  background: linear-gradient(130deg, #0fa530, #93f9c6);
   color : #fff;
   padding-right:50px;
   padding-left:50px;
@@ -50,7 +50,7 @@ body {
 
 .home {
   background-color:#fff; 
-  background-image: url('./image/bigtotoro.png');
+  background-image: url(./image/bigtotoro.png);
   background-repeat: no-repeat;
   background-position: right top;
 }
@@ -66,4 +66,21 @@ body {
   position: absolute;
   left:50px;
   bottom: 24px;
+}
+
+.rooter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo {
+  font-family: 'Courier New', Courier, monospace;
+  margin-right:20px;
+  font-size:50px;
+  font-weight: bold;
+  color:#0fa530;
+}
+
+.logo:hover {
+  color:#93f9c6;
 }

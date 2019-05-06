@@ -1,12 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import InputLabel from '@material-ui/core/InputLabel';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import GenelalButton from '../components/GeneralButton';
-import AppChat from '../components/AppChat';
+
 
 // Redux関連
 import { connect } from 'react-redux';
@@ -61,29 +56,6 @@ class Home extends React.Component {
     return (
       <div class='home'>
         <img src="/images/logo_animel_white.png" alt="title" className={classes.titleImage}/>
-        <form autoComplete="off">
-          <FormControl className={classes.formControl}>
-            <InputLabel shrink htmlFor="year-helper">sugiyama</InputLabel>
-            <Select
-              value={this.state.directer}
-              onChange={this.handleChange}
-              inputProps={{
-                name: 'year',
-                id: 'year-helper',
-              }}
-            >
-            {directer}
-            </Select>
-          </FormControl>
-        </form>
-        <Button
-          onClick={() => actions.getAnimes(this.state.year, this.state.cour)}
-        >
-        <GenelalButton title="検索"/>
-
-        </Button>
-        <AnimeList/>
-        <AppChat/>
       </div>
     );
   }

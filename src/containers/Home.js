@@ -37,6 +37,7 @@ const styles = theme => ({
 
 const directer = ['宮崎駿','高畑勲'];
 
+
 class Home extends React.Component {
 
   // ここだけでしか使わないのでRedux未使用;
@@ -68,16 +69,14 @@ class Home extends React.Component {
               value={this.state.directer}
               onChange={this.handleChange}
               inputProps={{
-                name: 'year',
-                id: 'year-helper',
+                name: 'directer',
               }}
             >
-            {directer}
             </Select>
           </FormControl>
         </form>
         <Button
-          onClick={() => actions.getAnimes(this.state.year, this.state.cour)}
+          onClick={() => actions.getAnimes(this.state.directer)}
         >
         <GenelalButton title="search"/>
 

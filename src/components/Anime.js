@@ -25,7 +25,6 @@ import TheWindRises from './../image/TheWindRises.png';
 import TheTaleOfThePrincessKaguya from './../image/TheTaleOfThePrincessKaguya.png';
 import WhenMarnieWasThere from './../image/WhenMarnieWasThere.png';
 
-
 const styles = {
   // Cards
   card: {

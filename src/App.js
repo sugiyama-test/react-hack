@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactPlayer from 'react-player';
 
 // コンテナ読み込み
 import ResponsiveDrawer from './containers/ResponsiveDrawer';
@@ -28,8 +29,10 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Link className='logo' to='/'>aaa</Link>
-        <Link className='logo' to='/Profile'>bbb</Link>
+        <div class="rooter">
+          <Link className='logo' to='/'>TOP</Link>
+          <Link className='logo' to='/Profile'>PROFILE</Link>
+        </div>
 
         <ResponsiveDrawer className="ResponsiveDrawer">
           <Switch>
