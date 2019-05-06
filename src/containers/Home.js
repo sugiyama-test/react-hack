@@ -79,7 +79,7 @@ class Home extends React.Component {
         <Button
           onClick={() => actions.getAnimes(this.state.year, this.state.cour)}
         >
-        <GenelalButton title="検索"/>
+        <GenelalButton title="search"/>
 
         </Button>
         <AnimeList/>

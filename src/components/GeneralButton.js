@@ -18,25 +18,27 @@ export default class GenelalButton extends Component {
   styles() {
     return {
       container: {
-        display: 'inline-block',
-        fontSize: '20px',
-        textDecoration: 'none',
-        transition: '.3s',
+        display: "inline-block",
+        fontSize: "20px",
+        textDecoration: "none",
+        transition: ".3s"
       },
       default: {
-        color: '#000',
-        border: '2px solid #000',
-        padding: '25px 40px',
+        background: "linear-gradient(to bottom, #36d1dc, #38d1d6)",
+        border: "none",
+        color: "#fff",
+        fontFamily: "cursive",
+        padding: "25px 40px"
       },
       Hover: {
-        color: '#000',
-        transition: '.5s',
-        borderRadius: '15px',
-        border: '2px solid #000',
-        background: 'rgba(255,255,255, .4)',
-        padding: '25px 40px',
+        background: "linear-gradient(to bottom, #36d1dc, #fffde4)",
+        borderRadius: "15px",
+        border: "none",
+        color: "#000",
+        fontFamily: "cursive",
+        padding: "25px 40px",
+        transition: ".5s"
       }
-
     };
   }
 
