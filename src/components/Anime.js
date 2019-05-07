@@ -25,6 +25,12 @@ import TheWindRises from './../image/TheWindRises.png';
 import TheTaleOfThePrincessKaguya from './../image/TheTaleOfThePrincessKaguya.png';
 import WhenMarnieWasThere from './../image/WhenMarnieWasThere.png';
 
+//youtube関連
+//npm installしたやつオプションはnode_moduleのyoutube-api-serachのindex.js
+import YSearch from 'youtube-api-search';
+//google developerconsoleのキー
+const YOUTUBE_API_KEY = 'AIzaSyABjpwY-9UPUUYncdCD740qdmfD_Yzjc3s';
+
 const styles = {
   // Cards
   card: {
@@ -70,7 +76,7 @@ const styles = {
 };
 
 function Anime(props) {
-  const { title, director, release_date　,　producer　, description　, classes } = props;
+  const { title, director, release_date　,　producer　, description　, classes, youtube } = props;
 
   let aaa ='';
 
@@ -158,6 +164,12 @@ function Anime(props) {
 
 }
 
+    //youtube関連 termで検索をかけてjsonを持ってくる
+    YSearch({ key: YOUTUBE_API_KEY, term: title + ' official trailer'}, (data) => {
+      console.log(data);
+      console.log(data[0].id.videoId);
+    });
+
     return (
       <Card className={classes.card}>
         <CardContent className='card'>
@@ -202,6 +214,15 @@ function Anime(props) {
               >
                 #{title}
               </a>
+            </Typography>
+          )}
+          {youtube !== "" && (
+            <Typography className={classes.title} color="textSecondary">
+              <iframe
+              //YSearchでとったjsonのdata[0].id.videoIDを入れたい
+                src={"https://www.youtube.com/embed/"+ "FBnAZnfNB6U"/*""+videoid+""*/ }
+              >
+              </iframe>
             </Typography>
           )}
         </CardContent>
