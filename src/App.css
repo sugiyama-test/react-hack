@@ -95,3 +95,12 @@ body {
 .userImg {
   margin-right:10px;
 }
+
+.padding0 {
+  padding: 0 !important;
+  background: #fff;
+}
+
+.padding0 :hover{
+  border-radius: 30px;
+}

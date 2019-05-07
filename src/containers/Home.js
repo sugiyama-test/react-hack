@@ -7,6 +7,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import GenelalButton from '../components/GeneralButton';
 import AppChat from '../components/AppChat';
+import MenuItem from '@material-ui/core/MenuItem';
 
 // Redux関連
 import { connect } from 'react-redux';
@@ -72,11 +73,14 @@ class Home extends React.Component {
                 name: 'directer',
               }}
             >
+            <MenuItem>{this.state.directer[0]}</MenuItem>
+            <MenuItem>{this.state.directer[1]}</MenuItem>
             </Select>
           </FormControl>
         </form>
         <Button
           onClick={() => actions.getAnimes(this.state.directer)}
+          className = 'padding0'
         >
         <GenelalButton title="search"/>
 

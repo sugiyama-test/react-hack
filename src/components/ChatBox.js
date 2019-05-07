@@ -3,6 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 
 export default class ChatBox extends React.Component {
   render() {
@@ -12,7 +13,11 @@ export default class ChatBox extends React.Component {
           <div className="">
             <TextField name='user_name' onChange={this.props.onTextChange} className=""  placeholder="Name" />
           <br/>
-            <Select name='profile_image' onChange={this.props.onTextChange} className="" placeholder="Profile Image URL" />
+            <Select name='profile_image' onChange={this.props.onTextChange} className="" placeholder="Profile Image URL" >
+              <MenuItem>poruko</MenuItem>
+              <MenuItem>hazi</MenuItem>
+              <MenuItem>cdvsljnvl</MenuItem>
+            </Select>
           </div>
           <TextField rows="4" multiLine="true" name='text' className="" onChange={this.props.onTextChange} />
           <RaisedButton primary="true" label="Send" className="" onClick={this.props.onButtonClick} />
