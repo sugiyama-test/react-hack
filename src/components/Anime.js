@@ -76,103 +76,125 @@ const styles = {
 };
 
 function Anime(props) {
-  const { title, director, release_date　,　producer　, description　, classes, youtube } = props;
+  const { title, director, release_date, producer, description, classes, youtube } = props;
 
-  let aaa ='';
+  let aaa = '';
+  let videos = '';
 
   switch(title) {
  
     case 'Castle in the Sky':
       aaa = CastleInTheSky;
+      videos = "AjMGpwwFXYo";
       break;
 
     case 'Grave of the Fireflies':
       aaa = GraveOfTheFireflies;
+      videos = "DQIALBcu0EI";
       break;
 
     case 'My Neighbor Totoro':
       aaa = MyNeighborTotoro;
+      videos = "92a7Hj0ijLs";
       break;
 
     case "Kiki's Delivery Service":
       aaa = KikisDeliveryService;
+      videos = "4bG17OYs-GA";
       break;
 
     case 'Only Yesterday':
       aaa = OnlyYesterday;
+      videos = "zCs9tOcoilk";
       break;
 
     case 'Porco Rosso':
       aaa = PorcoRosso;
+      videos = "awEC-aLDzjs";
       break;
 
     case 'Pom Poko':
       aaa = PomPoko;
+      videos = "_7cowIHjCD4";
       break;
 
     case 'Whisper of the Heart':
       aaa = WhisperOfTheHeart;
+      videos = "hu653_bgVNo";
       break;
 
     case 'Princess Mononoke':
       aaa = PrincessMononoke;
+      videos = "4OiMOHRDs14";
       break;
 
     case 'My Neighbors the Yamadas':
       aaa = MyNeighborsTheYamadas;
+      videos = "_I825AWZ1Dg";
       break;
 
     case 'Spirited Away':
       aaa = SpiritedAway;
+      videos = "ByXuk9QqQkk";
       break;
 
     case 'The Cat Returns':
       aaa = TheCatReturns;
+      videos = "Gp-H_YOcYTM";
       break;
 
     case "Howl's Moving Castle":
       aaa = HowlsMovingCastle;
+      videos = "iwROgK94zcM";
       break;
 
     case 'Tales from Earthsea':
       aaa = TalesFromEarthsea;
+      videos = "qWov2y3RTjw";
       break;
 
     case 'Ponyo':
       aaa = Ponyo;
+      videos = "6WlVvl8hK5M";
       break;
 
     case 'Arrietty':
       aaa = Arrietty;
+      videos = "BZqVL8ryhJQ";
       break;
 
     case 'From Up on Poppy Hill':
       aaa = FromUpOnPoppyHill;
+      videos = "1souQjy7k9A";
       break;
 
     case 'The Wind Rises':
       aaa = TheWindRises;
+      videos = "imtdgdGOB6Q";
       break;
 
     case 'The Tale of the Princess Kaguya':
       aaa = TheTaleOfThePrincessKaguya;
+      videos = "9lDrkokymLQ";
       break;
 
       case 'When Marnie Was There':
       aaa = WhenMarnieWasThere;
+      videos = "PZq4uuMP8ss";
       break;
 
 }
 
-    //youtube関連 termで検索をかけてjsonを持ってくる
-    YSearch({ key: YOUTUBE_API_KEY, term: title + ' official trailer'}, (data) => {
-      console.log(data);
-      console.log(data[0].id.videoId);
-    });
-
+  //youtube関連 termで検索をかけてjsonを持ってくる
+  YSearch({ key: YOUTUBE_API_KEY, term: title + ' official trailer' }, (data) => {
+    console.log(data);
+    console.log(data[0].id.videoId);
+  });
+  
+  
     return (
       <Card className={classes.card}>
-        <CardContent className='card'>
+        <CardContent className="card">
           {release_date !== "" && (
             <Typography className={classes.release} color="textSecondary">
               {release_date}
@@ -183,9 +205,8 @@ function Anime(props) {
             variant="headline"
             component="h2"
           >
-
-          {/* {title} */}
-            <img src={aaa}/>
+            {/* {title} */}
+            <img src={aaa} />
           </Typography>
           {release_date !== "" && (
             <Typography
@@ -219,10 +240,11 @@ function Anime(props) {
           {youtube !== "" && (
             <Typography className={classes.title} color="textSecondary">
               <iframe
-              //YSearchでとったjsonのdata[0].id.videoIDを入れたい
-                src={"https://www.youtube.com/embed/"+ "FBnAZnfNB6U"/*""+videoid+""*/ }
-              >
-              </iframe>
+                //YSearchでとったjsonのdata[0].id.videoIDを入れたい
+                src={
+                  "https://www.youtube.com/embed/" + videos /*""+videoid+""*/
+                }
+              />
             </Typography>
           )}
         </CardContent>
